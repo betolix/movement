@@ -64,6 +64,40 @@ document.getElementById('editPortrait').onclick=()=>{const p=document.getElement
 let timer; const heart=document.getElementById('heart'); const start=()=>{heart.classList.add('holding');timer=setTimeout(()=>{if(navigator.vibrate)navigator.vibrate(40);show(11)},1200)}; const stop=()=>{clearTimeout(timer);heart.classList.remove('holding')};
 ['mousedown','touchstart'].forEach(e=>heart.addEventListener(e,start,{passive:true}));['mouseup','mouseleave','touchend','touchcancel'].forEach(e=>heart.addEventListener(e,stop));
 document.querySelectorAll('.feeling').forEach(b=>b.onclick=()=>{const chosen=document.querySelectorAll('.feeling.selected');if(!b.classList.contains('selected')&&chosen.length>=3)return;b.classList.toggle('selected');state.feelings=[...document.querySelectorAll('.feeling.selected')].map(x=>x.textContent)});
-document.getElementById('save').onclick=()=>{const email=document.getElementById('email').value.trim(), consent=document.getElementById('consent').checked;if(!email||!consent){alert('Please add an email and agree to receive the invitation.');return;}state.email=email;state.phone=document.getElementById('phone').value.trim();state.portrait=document.getElementById('portrait').textContent.trim();console.log('Prototype data',state);show(16)};
-document.getElementById('finish').onclick=()=>{state.feedback=document.getElementById('feedback').value.trim();console.log('Final prototype data',state);/* Replace console logging with a secure form/API endpoint. */show(17)};
+document.getElementById('save').onclick=()=>{const email=document.getElementById('email').value.trim(), consent=document.getElementById('consent').checked;if(!email||!consent){alert('Please add an email and agree to receive the invitation.');return;}state.email=email;state.phone=document.getElementById('phone').value.trim();state.portrait=document.getElementById('portrait').textContent.trim();show(16)};
+
+const SHEET_ENDPOINT =
+  "https://script.google.com/macros/s/AKfycbwNAfZgIWgcJBbfYsWPZ6entT63J20Z3umRA0S2ncu6YjP5GddLoXosprGTTHfHSAJr/exec";
+
+document.getElementById('finish').onclick = async () => {
+  state.feedback =
+    document.getElementById('feedback').value.trim();
+
+  const button = document.getElementById('finish');
+  button.disabled = true;
+  button.textContent = 'Saving...';
+
+  try {
+    await fetch(SHEET_ENDPOINT, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'text/plain;charset=utf-8'
+      },
+      body: JSON.stringify(state)
+    });
+
+    show(17);
+
+  } catch (error) {
+    console.error('Could not save Movement response:', error);
+
+    alert(
+      'Something went wrong while saving your response. Please try again.'
+    );
+
+    button.disabled = false;
+    button.textContent = 'Share feedback';
+  }
+};
+
 </script></body></html>
