@@ -22,34 +22,27 @@ textarea,input{width:100%;border:1px solid var(--line);background:var(--surface)
 </style>
 </head>
 <body><main class="app"><div class="top"><div class="mark">//</div><div class="progress" id="progress"></div></div>
- 
 <section class="screen active" data-step="0"><div class="center"><h1>There is more to you than what you do.</h1><p>A few thoughtful questions can help us discover what moves you.</p></div><div class="actions"><button class="primary next">Discover what moves you</button></div></section>
- 
 <section class="screen" data-step="1"><div class="center"><h2>What brings you here today?</h2><div class="choices single" data-key="intent"><button class="choice">Find experiences</button><button class="choice">Share something I love</button><button class="choice">Just curious</button></div></div><div class="actions"><button class="primary next">Continue</button></div></section>
- 
 <section class="screen q" data-step="2" data-key="q1"><div class="center"><h2>What do you lose track of time doing?</h2><textarea placeholder="A sentence is enough."></textarea></div><div class="actions"><button class="primary next">Continue</button><button class="secondary next">Skip for now</button></div></section>
 <section class="screen q" data-step="3" data-key="q2"><div class="center"><h2>What do people naturally come to you for?</h2><p>Choose up to three.</p><div class="choices multi"><button class="choice">Encouragement</button><button class="choice">Solving problems</button><button class="choice">Teaching</button><button class="choice">Listening</button><button class="choice">Creativity</button><button class="choice">Bringing people together</button></div></div><div class="actions"><button class="primary next">Continue</button><button class="secondary next">Skip for now</button></div></section>
 <section class="screen q" data-step="4" data-key="q3"><div class="center"><h2>What feels ordinary to you, but useful or interesting to other people?</h2><textarea placeholder="Something you may take for granted."></textarea></div><div class="actions"><button class="primary next">Continue</button><button class="secondary next">Skip for now</button></div></section>
 <section class="screen q" data-step="5" data-key="q4"><div class="center"><h2>When do you feel most like yourself?</h2><textarea placeholder="Think of a moment, place, or activity."></textarea></div><div class="actions"><button class="primary next">Continue</button><button class="secondary next">Skip for now</button></div></section>
 <section class="screen q" data-step="6" data-key="q5"><div class="center"><h2>What experience has shaped how you see the world?</h2><p>This one is optional.</p><textarea placeholder="Share only what feels comfortable."></textarea></div><div class="actions"><button class="primary next">Continue</button><button class="secondary next">Skip for now</button></div></section>
 <section class="screen q" data-step="7" data-key="q6"><div class="center"><h2>What part of yourself would you enjoy sharing with someone else?</h2><textarea placeholder="An interest, experience, skill, or point of view."></textarea></div><div class="actions"><button class="primary next">Continue</button></div></section>
- 
 <section class="screen" data-step="8"><div class="center"><h1>We are seeing something…</h1><p>Not a résumé. A glimpse of what you naturally bring to people.</p></div><div class="actions"><button class="primary next">Show me</button></div></section>
- 
-<section class="screen" data-step="9"><div class="center"><div class="card"><div class="eyebrow">Your //Mover Portrait</div><div class="portrait" id="portrait">You come alive when you help people feel capable and connected. You have a gift for making intimidating things feel welcoming, and people naturally look to you for encouragement and practical direction. Your lived experiences have taught you that community can become family.</div></div></div><div class="actions"><button class="primary next">This feels like me</button><button class="secondary" id="editPortrait">Let me shape it</button></div></section>
- 
+<section class="screen" data-step="9"><div class="center"><div class="card"><div class="eyebrow">Your //Mover Portrait</div><div class="portrait" id="portrait">You come alive when you help people feel capable and connected. You have a gift for making intimidating things feel welcoming, and people naturally look to you for encouragement and practical direction.
+Your lived experiences have taught you that community can become family.</div></div></div><div class="actions"><button class="primary next">This feels like me</button><button class="secondary" id="editPortrait">Let me shape it</button></div></section>
+
 <section class="screen" data-step="10"><div class="center"><h2>Every //Movement begins with one person.</h2><p>Today, that person is you.</p><div class="heart-wrap"><button class="heart" id="heart" aria-label="Press and hold">♥</button></div><p class="small" style="text-align:center">Press and hold</p></div></section>
- 
 <section class="screen" data-step="11"><div class="center"><h1>You are now part of our story.</h1><p>Welcome, //Mover.</p></div><div class="actions"><button class="primary next">Continue</button></div></section>
- 
 <section class="screen" data-step="12"><div class="center"><div class="card"><div class="eyebrow">Maya · //Mover</div><h2>I come alive when I help people stop feeling intimidated by fitness.</h2><p>People come to me for encouragement, energy, and a way to make movement feel welcoming.</p><div class="meta"><span class="pill">Hollywood, FL</span><span class="pill">Fitness</span><span class="pill">Community</span></div></div></div><div class="actions"><button class="primary next">See Maya's experience</button></div></section>
- 
-<section class="screen" data-step="13"><div class="center"><div class="card"><div class="eyebrow">Sunrise Movement</div><h2>Move, connect, and start the day energized.</h2><p>A welcoming beach workout. No perfect fitness level required.</p><div class="meta"><span class="pill">Saturday · 8:00 AM</span><span class="pill">Hollywood Beach</span><span class="pill">45 min</span><span class="pill">$10</span></div></div></div><div class="actions"><button class="primary next">Imagine you joined</button></div></section>
- 
+<section class="screen" data-step="13"><div class="center"><div class="card"><div class="eyebrow">Sunrise Movement</div><h2>Move, connect, and start the day energized.</h2><p>A welcoming beach workout.
+No perfect fitness level required.</p><div class="meta"><span class="pill">Saturday · 8:00 AM</span><span class="pill">Hollywood Beach</span><span class="pill">45 min</span><span class="pill">$10</span></div></div></div><div class="actions"><button class="primary next">Imagine you joined</button></div></section>
 <section class="screen" data-step="14"><div class="center"><h2>How did you leave?</h2><p>Select up to three.</p><div class="feelings"><button class="feeling">Inspired</button><button class="feeling">More confident</button><button class="feeling">Connected</button><button class="feeling">Curious</button><button class="feeling">Energized</button><button class="feeling">Calm</button><button class="feeling">Learned something</button><button class="feeling">Made a friend</button></div></div><div class="actions"><button class="primary next">Continue</button></div></section>
- 
-<section class="screen" data-step="15"><div class="center"><h2>//Movement is still being built.</h2><p>You are one of the first people helping shape it. Where should we send your invitation when we open?</p><input id="email" type="email" placeholder="Email address" /><div style="height:10px"></div><input id="phone" type="tel" placeholder="Mobile number (optional)" /><div style="height:14px"></div><label class="check"><input id="consent" type="checkbox" />I agree to receive launch updates and invitations from //Movement.</label></div><div class="actions"><button class="primary" id="save">Save my place</button></div></section>
- 
+<section class="screen" data-step="15"><div class="center"><h2>//Movement is still being built.</h2><p>You are one of the first people helping shape it.
+Where should we send your invitation when we open?</p><input id="name" type="text" placeholder="Name" autocomplete="name" /><div style="height:10px"></div><input id="email" type="email" placeholder="Email address" autocomplete="email" /><div style="height:10px"></div><input id="phone" type="tel" placeholder="Mobile number (optional)" autocomplete="tel" /><div style="height:14px"></div><label class="check"><input id="consent" type="checkbox" />I agree to receive launch updates and invitations from //Movement.</label></div><div class="actions"><button class="primary" id="save">Save my place</button></div></section>
+
 <section class="screen" data-step="16"><div class="center"><h2>Your voice matters.</h2><textarea id="feedback" placeholder="What should we make simpler? What felt meaningful? What was missing?"></textarea></div><div class="actions"><button class="primary" id="finish">Share feedback</button></div></section>
 <section class="screen" data-step="17"><div class="center"><h1>Thank you.</h1><p>You helped move this forward.</p></div><div class="actions"><button class="primary" onclick="location.reload()">Restart prototype</button></div></section>
 </main>
@@ -64,8 +57,21 @@ document.getElementById('editPortrait').onclick=()=>{const p=document.getElement
 let timer; const heart=document.getElementById('heart'); const start=()=>{heart.classList.add('holding');timer=setTimeout(()=>{if(navigator.vibrate)navigator.vibrate(40);show(11)},1200)}; const stop=()=>{clearTimeout(timer);heart.classList.remove('holding')};
 ['mousedown','touchstart'].forEach(e=>heart.addEventListener(e,start,{passive:true}));['mouseup','mouseleave','touchend','touchcancel'].forEach(e=>heart.addEventListener(e,stop));
 document.querySelectorAll('.feeling').forEach(b=>b.onclick=()=>{const chosen=document.querySelectorAll('.feeling.selected');if(!b.classList.contains('selected')&&chosen.length>=3)return;b.classList.toggle('selected');state.feelings=[...document.querySelectorAll('.feeling.selected')].map(x=>x.textContent)});
-document.getElementById('save').onclick=()=>{const email=document.getElementById('email').value.trim(), consent=document.getElementById('consent').checked;if(!email||!consent){alert('Please add an email and agree to receive the invitation.');return;}state.email=email;state.phone=document.getElementById('phone').value.trim();state.portrait=document.getElementById('portrait').textContent.trim();show(16)};
-
+document.getElementById('save').onclick=()=>{
+  const name=document.getElementById('name').value.trim();
+  const email=document.getElementById('email').value.trim();
+  const consent=document.getElementById('consent').checked;
+  if(!name||!email||!consent){
+    alert('Please add your name and email and agree to receive the invitation.');
+    return;
+  }
+  state.name=name;
+  state.email=email;
+  state.phone=document.getElementById('phone').value.trim();
+  state.consent=consent;
+  state.portrait=document.getElementById('portrait').textContent.trim();
+  show(16)
+};
 const SHEET_ENDPOINT =
   "https://script.google.com/macros/s/AKfycbwNAfZgIWgcJBbfYsWPZ6entT63J20Z3umRA0S2ncu6YjP5GddLoXosprGTTHfHSAJr/exec";
 
@@ -76,7 +82,6 @@ document.getElementById('finish').onclick = async () => {
   const button = document.getElementById('finish');
   button.disabled = true;
   button.textContent = 'Saving...';
-
   try {
     await fetch(SHEET_ENDPOINT, {
       method: 'POST',
